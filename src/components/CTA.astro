@@ -1,0 +1,107 @@
+---
+import { Phone, Mail, MessageCircle, ArrowRight } from 'lucide-react';
+---
+
+<section class="py-20 bg-gradient-to-br from-primary-900 via-accent-900 to-secondary-900 relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+    <div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto text-center">
+      
+      <!-- Main CTA Content -->
+      <div class="mb-12">
+        <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 animate-slide-up">
+          Klaar voor een
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">
+            Veiligere Toekomst?
+          </span>
+        </h2>
+        
+        <p class="text-xl sm:text-2xl text-primary-200 mb-8 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+          Onze beveiligingsexperts staan klaar om uw specifieke uitdagingen te bespreken 
+          en een op maat gemaakte oplossing te ontwikkelen. Samen maken we uw bedrijf veiliger en toekomstbestendig.
+        </p>
+      </div>
+
+      <!-- Contact Options -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        
+        <!-- Phone -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 animate-slide-up" style="animation-delay: 0.3s;">
+          <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Phone class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Bel Direct</h3>
+          <p class="text-primary-200 mb-4">Praat direct met onze experts</p>
+          <a href="tel:+5999461532" class="inline-flex items-center text-accent-400 hover:text-accent-300 font-semibold transition-colors">
+            +599 9 461 1532
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </a>
+        </div>
+
+        <!-- Email -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 animate-slide-up" style="animation-delay: 0.4s;">
+          <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <Mail class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Email Ons</h3>
+          <p class="text-primary-200 mb-4">Stuur uw vraag of project details</p>
+          <a href="mailto:it@it.cw" class="inline-flex items-center text-secondary-400 hover:text-secondary-300 font-semibold transition-colors">
+            it@it.cw
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </a>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/20 transition-all duration-300 animate-slide-up" style="animation-delay: 0.5s;">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+            <MessageCircle class="w-8 h-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">WhatsApp</h3>
+          <p class="text-primary-200 mb-4">Snelle communicatie via chat</p>
+          <a href="https://wa.me/5999461532" target="_blank" class="inline-flex items-center text-green-400 hover:text-green-300 font-semibold transition-colors">
+            Chat Nu
+            <ArrowRight class="w-4 h-4 ml-2" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Main CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-slide-up" style="animation-delay: 0.6s;">
+        <a href="/contact" class="group bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:shadow-2xl hover:shadow-accent-500/25 transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>Plan een Gratis Consult</span>
+          <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+        
+        <a href="/projecten" class="group bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>Bekijk Onze Projecten</span>
+          <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+
+      <!-- Trust Indicators -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center animate-slide-up" style="animation-delay: 0.7s;">
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">500+</div>
+          <div class="text-primary-300 text-sm">Installaties</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">200+</div>
+          <div class="text-primary-300 text-sm">Tevreden Klanten</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">14+</div>
+          <div class="text-primary-300 text-sm">Jaar Ervaring</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-white mb-1">24/7</div>
+          <div class="text-primary-300 text-sm">Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

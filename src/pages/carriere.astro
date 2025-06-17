@@ -1,0 +1,341 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Users, Zap, Award, Heart, Upload, Mail, Phone, ArrowRight } from 'lucide-react';
+
+const benefits = [
+  {
+    icon: Zap,
+    title: "Innovatieve Technologie",
+    description: "Werk met de nieuwste beveiligings- en IT-technologieën van wereldmerken zoals FLIR, Axis en Panduit."
+  },
+  {
+    icon: Award,
+    title: "Professionele Ontwikkeling",
+    description: "Continu leren en groeien door trainingen, certificeringen en doorgroeimogelijkheden."
+  },
+  {
+    icon: Heart,
+    title: "Goede Arbeidsvoorwaarden",
+    description: "Competitief salaris, goede secundaire arbeidsvoorwaarden en een gezonde werk-privé balans."
+  },
+  {
+    icon: Users,
+    title: "Hecht Team",
+    description: "Werk samen met ervaren professionals in een collegiale en ondersteunende werkomgeving."
+  }
+];
+
+const vacancies = [
+  {
+    title: "Security Systems Engineer",
+    department: "Techniek",
+    type: "Fulltime",
+    location: "Curaçao",
+    description: "Zoeken we een ervaren engineer voor de installatie en onderhoud van beveiligingssystemen.",
+    requirements: ["MBO+ opleiding Elektrotechniek", "3+ jaar ervaring met CCTV/toegangscontrole", "Rijbewijs B", "Goede communicatieve vaardigheden"]
+  },
+  {
+    title: "IT Network Specialist",
+    department: "IT",
+    type: "Fulltime", 
+    location: "Curaçao",
+    description: "Voor onze groeiende IT-afdeling zoeken we een specialist in netwerkinfrastructuur en bekabeling.",
+    requirements: ["HBO opleiding ICT/Netwerken", "Ervaring met Cisco/HP netwerkapparatuur", "Kennis van glasvezel installaties", "Certificeringen gewenst"]
+  },
+  {
+    title: "Project Manager",
+    department: "Management",
+    type: "Fulltime",
+    location: "Curaçao", 
+    description: "Leid complexe beveiligings- en IT-projecten van planning tot oplevering bij onze klanten.",
+    requirements: ["HBO+ opleiding", "5+ jaar projectmanagement ervaring", "PMP certificering gewenst", "Tweetalig (NL/EN)"]
+  },
+  {
+    title: "Technisch Adviseur",
+    department: "Sales",
+    type: "Fulltime",
+    location: "Curaçao",
+    description: "Adviseer klanten over beveiligingsoplossingen en vertaal hun wensen naar technische specificaties.",
+    requirements: ["HBO opleiding techniek", "Commerciële instelling", "Technische kennis beveiliging", "Presentatievaardigheden"]
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Ik werk hier sinds 2018 en groei elk jaar in mijn rol. De diversiteit aan projecten en de ondersteuning van collega's maken dit een geweldige werkplek.",
+    author: "Maria Santos",
+    position: "Senior Technicus"
+  },
+  {
+    quote: "Bij Installation Technologies krijg je de kans om te werken met de nieuwste technologieën. De trainingen en certificeringen helpen me om voorop te blijven lopen.",
+    author: "Ricardo Martina", 
+    position: "IT Specialist"
+  }
+];
+---
+
+<Layout 
+  title="Carrière - Installation Technologies N.V."
+  description="Bouw mee aan de toekomst van beveiliging en IT. Bekijk onze vacatures en word deel van het team van Installation Technologies N.V. op Curaçao."
+>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-accent-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-5xl sm:text-6xl font-bold mb-6 animate-slide-up">
+            Bouw mee aan de <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">toekomst</span> 
+            van beveiliging en IT
+          </h1>
+          <p class="text-xl text-primary-200 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            Bij Installation Technologies geloven we in mensen. Of je nu starter bent of doorgewinterde technicus – 
+            wij bieden een omgeving waarin je kunt groeien, leren en impact maken. 
+            Bekijk onze openstaande functies of stuur een open sollicitatie. Word jij onze nieuwe collega?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Waarom werken bij <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-secondary-600">Installation Technologies?</span>
+          </h2>
+          <p class="text-xl text-primary-600 max-w-3xl mx-auto">
+            Ontdek wat wij jou als werkgever kunnen bieden en waarom onze medewerkers graag bij ons werken.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {benefits.map((benefit, index) => {
+            const Icon = benefit.icon;
+            return (
+              <div class={`bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 animate-slide-up`} style={`animation-delay: ${index * 0.1}s;`}>
+                <div class="w-16 h-16 bg-accent-500 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-8 h-8 text-white" />
+                </div>
+                <h3 class="text-xl font-bold text-primary-900 mb-4">{benefit.title}</h3>
+                <p class="text-primary-600 leading-relaxed">{benefit.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Vacancies -->
+    <section class="py-20 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Openstaande <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-secondary-600">Vacatures</span>
+          </h2>
+          <p class="text-xl text-primary-600 max-w-3xl mx-auto">
+            Bekijk onze huidige vacatures en vind de functie die bij jou past.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {vacancies.map((vacancy, index) => (
+            <div class={`bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-up`} style={`animation-delay: ${index * 0.1}s;`}>
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-primary-900 mb-2">{vacancy.title}</h3>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm">{vacancy.department}</span>
+                    <span class="bg-secondary-100 text-secondary-700 px-3 py-1 rounded-full text-sm">{vacancy.type}</span>
+                    <span class="bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm">{vacancy.location}</span>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="text-primary-600 mb-6 leading-relaxed">{vacancy.description}</p>
+              
+              <div class="mb-6">
+                <h4 class="font-semibold text-primary-900 mb-3">Vereisten:</h4>
+                <ul class="space-y-2">
+                  {vacancy.requirements.map((req) => (
+                    <li class="flex items-center text-primary-700 text-sm">
+                      <div class="w-2 h-2 bg-accent-500 rounded-full mr-3"></div>
+                      {req}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <a href="#sollicitatie" class="inline-flex items-center bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200">
+                Solliciteer Nu
+                <ArrowRight class="w-4 h-4 ml-2" />
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Wat Onze <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-secondary-600">Medewerkers</span> Zeggen
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <div class={`bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 animate-slide-up`} style={`animation-delay: ${index * 0.2}s;`}>
+              <blockquote class="text-primary-700 mb-6 italic leading-relaxed">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-accent-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  {testimonial.author.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div>
+                  <div class="font-semibold text-primary-900">{testimonial.author}</div>
+                  <div class="text-primary-600 text-sm">{testimonial.position}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="sollicitatie" class="py-20 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-primary-900 mb-4">
+              Solliciteer <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-secondary-600">Direct</span>
+            </h2>
+            <p class="text-xl text-primary-600">
+              Vul het formulier in of stuur een open sollicitatie. We nemen zo snel mogelijk contact met je op.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <form class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-primary-700 mb-2">Voornaam *</label>
+                  <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-primary-700 mb-2">Achternaam *</label>
+                  <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-medium text-primary-700 mb-2">E-mailadres *</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-primary-700 mb-2">Telefoonnummer</label>
+                  <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+              </div>
+
+              <div>
+                <label for="position" class="block text-sm font-medium text-primary-700 mb-2">Functie van interesse</label>
+                <select id="position" name="position" class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                  <option value="">Selecteer een functie</option>
+                  <option value="security-engineer">Security Systems Engineer</option>
+                  <option value="it-specialist">IT Network Specialist</option>
+                  <option value="project-manager">Project Manager</option>
+                  <option value="technical-advisor">Technisch Adviseur</option>
+                  <option value="open-application">Open Sollicitatie</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="motivation" class="block text-sm font-medium text-primary-700 mb-2">Motivatie *</label>
+                <textarea id="motivation" name="motivation" rows="4" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500" placeholder="Vertel ons waarom je bij Installation Technologies wilt werken..."></textarea>
+              </div>
+
+              <div>
+                <label for="cv" class="block text-sm font-medium text-primary-700 mb-2">CV Upload</label>
+                <div class="border-2 border-dashed border-primary-300 rounded-lg p-6 text-center hover:border-accent-500 transition-colors">
+                  <Upload class="w-8 h-8 text-primary-400 mx-auto mb-2" />
+                  <p class="text-primary-600">Sleep je CV hierheen of <span class="text-accent-600 font-medium">klik om te uploaden</span></p>
+                  <p class="text-sm text-primary-500 mt-1">PDF, DOC of DOCX (max 5MB)</p>
+                  <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" class="hidden">
+                </div>
+              </div>
+
+              <div class="flex items-center">
+                <input type="checkbox" id="privacy" name="privacy" required class="w-4 h-4 text-accent-600 border-primary-300 rounded focus:ring-accent-500">
+                <label for="privacy" class="ml-2 text-sm text-primary-700">
+                  Ik ga akkoord met het <a href="/privacy" class="text-accent-600 hover:underline">privacybeleid</a> *
+                </label>
+              </div>
+
+              <div class="flex flex-col sm:flex-row gap-4">
+                <button type="submit" class="bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center">
+                  Verstuur Sollicitatie
+                  <ArrowRight class="w-5 h-5 ml-2" />
+                </button>
+                <div class="flex items-center text-primary-600">
+                  <Mail class="w-5 h-5 mr-2" />
+                  <span>Of mail naar: <a href="mailto:hr@it.cw" class="text-accent-600 hover:underline">hr@it.cw</a></span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  // File upload functionality
+  const fileInput = document.getElementById('cv');
+  const uploadArea = fileInput?.parentElement;
+  
+  uploadArea?.addEventListener('click', () => fileInput?.click());
+  
+  uploadArea?.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    uploadArea.classList.add('border-accent-500');
+  });
+  
+  uploadArea?.addEventListener('dragleave', () => {
+    uploadArea.classList.remove('border-accent-500');
+  });
+  
+  uploadArea?.addEventListener('drop', (e) => {
+    e.preventDefault();
+    uploadArea.classList.remove('border-accent-500');
+    const files = e.dataTransfer?.files;
+    if (files && files.length > 0) {
+      fileInput.files = files;
+      updateFileDisplay(files[0]);
+    }
+  });
+  
+  fileInput?.addEventListener('change', (e) => {
+    const file = e.target.files?.[0];
+    if (file) updateFileDisplay(file);
+  });
+  
+  function updateFileDisplay(file: File) {
+    const uploadText = uploadArea?.querySelector('p');
+    if (uploadText) {
+      uploadText.textContent = `Geselecteerd: ${file.name}`;
+    }
+  }
+</script>

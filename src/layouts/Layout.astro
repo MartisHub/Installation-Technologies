@@ -1,0 +1,135 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+}
+
+const { 
+  title, 
+  description = "Installation Technologies N.V. - Marktleider in beveiligingsoplossingen en IT-infrastructuur op Curaçao. Specialist in inbraakdetectie, camerabewaking, brandveiligheid en IT-netwerken.",
+  keywords = "beveiligingsinstallatie, camerabewaking, inbraakdetectie, brandveiligheid, IT infrastructuur, netwerkbekabeling, Curaçao, Caribisch gebied",
+  ogImage = "/og-image.jpg"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+---
+
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Installation Technologies N.V.",
+        "url": "https://it.cw",
+        "logo": "https://it.cw/logo.png",
+        "description": "Marktleider in beveiligingsoplossingen en IT-infrastructuur op Curaçao",
+        "address": [
+          {
+            "@type": "PostalAddress",
+            "streetAddress": "Kaya Kooyman 22",
+            "addressLocality": "Saliña",
+            "addressCountry": "CW"
+          },
+          {
+            "@type": "PostalAddress", 
+            "streetAddress": "Schottegatweg Oost 142",
+            "addressLocality": "Zeelandia",
+            "addressCountry": "CW"
+          }
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+599-9-461-1532",
+          "contactType": "customer service",
+          "email": "it@it.cw"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/installation-technologies-nv"
+        ]
+      }
+    </script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/hero-bg.jpg" as="image" />
+  </head>
+  <body class="bg-primary-50 text-primary-900 font-sans antialiased">
+    <slot />
+    
+    <!-- Analytics & Chat Scripts -->
+    <script>
+      // Add your analytics and chat scripts here
+      console.log('Installation Technologies N.V. - Website loaded');
+    </script>
+  </body>
+</html>
+
+<style>
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Smooth scrolling fallback */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #6366f1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4f46e5;
+  }
+</style>

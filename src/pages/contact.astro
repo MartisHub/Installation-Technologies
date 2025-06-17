@@ -1,0 +1,266 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowRight, Send } from 'lucide-react';
+---
+
+<Layout 
+  title="Contact - Installation Technologies N.V."
+  description="Neem contact op met Installation Technologies N.V. voor beveiligingsoplossingen en IT-infrastructuur op Curaçao. Bel, mail of bezoek ons kantoor."
+>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-accent-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-5xl sm:text-6xl font-bold mb-6 animate-slide-up">
+            Neem contact op met <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">ons team</span>
+          </h1>
+          <p class="text-xl text-primary-200 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            Heb je vragen over onze diensten? Interesse in een samenwerking? Of wil je een vrijblijvende offerte aanvragen? 
+            Vul het formulier in of neem direct contact met ons op via telefoon of e-mail. We staan voor je klaar.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Options -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          
+          <!-- Phone -->
+          <div class="text-center bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 animate-slide-up">
+            <div class="w-16 h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Phone class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-2">Bel Direct</h3>
+            <p class="text-primary-600 mb-4">Praat direct met onze experts</p>
+            <a href="tel:+5999461532" class="inline-flex items-center text-accent-600 hover:text-accent-500 font-semibold text-lg transition-colors">
+              +599 9 461 1532
+              <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <!-- Email -->
+          <div class="text-center bg-gradient-to-br from-secondary-50 to-accent-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <Mail class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-2">Email Ons</h3>
+            <p class="text-primary-600 mb-4">Stuur uw vraag of project details</p>
+            <a href="mailto:it@it.cw" class="inline-flex items-center text-secondary-600 hover:text-secondary-500 font-semibold text-lg transition-colors">
+              it@it.cw
+              <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="text-center bg-gradient-to-br from-green-50 to-accent-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <MessageCircle class="w-8 h-8 text-white" />
+            </div>
+            <h3 class="text-xl font-bold text-primary-900 mb-2">WhatsApp</h3>
+            <p class="text-primary-600 mb-4">Snelle communicatie via chat</p>
+            <a href="https://wa.me/5999461532" target="_blank" class="inline-flex items-center text-green-600 hover:text-green-500 font-semibold text-lg transition-colors">
+              Chat Nu
+              <ArrowRight class="w-4 h-4 ml-2" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form & Info -->
+    <section class="py-20 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          
+          <!-- Contact Form -->
+          <div class="animate-slide-up">
+            <h2 class="text-3xl font-bold text-primary-900 mb-8">Stuur ons een bericht</h2>
+            
+            <form class="space-y-6 bg-white rounded-2xl p-8 shadow-lg">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="firstName" class="block text-sm font-medium text-primary-700 mb-2">Voornaam *</label>
+                  <input type="text" id="firstName" name="firstName" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+                <div>
+                  <label for="lastName" class="block text-sm font-medium text-primary-700 mb-2">Achternaam *</label>
+                  <input type="text" id="lastName" name="lastName" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label for="email" class="block text-sm font-medium text-primary-700 mb-2">E-mailadres *</label>
+                  <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+                <div>
+                  <label for="phone" class="block text-sm font-medium text-primary-700 mb-2">Telefoonnummer</label>
+                  <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                </div>
+              </div>
+
+              <div>
+                <label for="company" class="block text-sm font-medium text-primary-700 mb-2">Bedrijf/Organisatie</label>
+                <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium text-primary-700 mb-2">Onderwerp *</label>
+                <select id="subject" name="subject" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500">
+                  <option value="">Waar gaat je vraag over?</option>
+                  <option value="general">Algemene vraag</option>
+                  <option value="quote">Offerte aanvragen</option>
+                  <option value="security">Beveiligingssystemen</option>
+                  <option value="fire">Brandbeveiliging</option>
+                  <option value="it">IT & Netwerken</option>
+                  <option value="monitoring">Inspectie & Monitoring</option>
+                  <option value="parking">Parkeersystemen</option>
+                  <option value="support">Technische ondersteuning</option>
+                  <option value="partnership">Samenwerking</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-primary-700 mb-2">Bericht *</label>
+                <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 border border-primary-300 rounded-lg focus:ring-2 focus:ring-accent-500 focus:border-accent-500" placeholder="Beschrijf uw vraag of project zo gedetailleerd mogelijk..."></textarea>
+              </div>
+
+              <div class="flex items-center">
+                <input type="checkbox" id="privacy" name="privacy" required class="w-4 h-4 text-accent-600 border-primary-300 rounded focus:ring-accent-500">
+                <label for="privacy" class="ml-2 text-sm text-primary-700">
+                  Ik ga akkoord met het <a href="/privacy" class="text-accent-600 hover:underline">privacybeleid</a> *
+                </label>
+              </div>
+
+              <button type="submit" class="w-full bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center justify-center">
+                Verstuur Bericht
+                <Send class="w-5 h-5 ml-2" />
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info & Map -->
+          <div class="animate-slide-up" style="animation-delay: 0.2s;">
+            <h2 class="text-3xl font-bold text-primary-900 mb-8">Bezoek ons kantoor</h2>
+            
+            <!-- Office Locations -->
+            <div class="space-y-8 mb-8">
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold text-primary-900 mb-4 flex items-center">
+                  <MapPin class="w-5 h-5 text-accent-600 mr-2" />
+                  Hoofdkantoor Saliña
+                </h3>
+                <div class="space-y-2 text-primary-600">
+                  <p>Kaya Kooyman 22</p>
+                  <p>Saliña, Curaçao</p>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-2xl p-6 shadow-lg">
+                <h3 class="text-xl font-bold text-primary-900 mb-4 flex items-center">
+                  <MapPin class="w-5 h-5 text-secondary-600 mr-2" />
+                  Vestiging Zeelandia
+                </h3>
+                <div class="space-y-2 text-primary-600">
+                  <p>Schottegatweg Oost 142</p>
+                  <p>Zeelandia, Curaçao</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Business Hours -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg mb-8">
+              <h3 class="text-xl font-bold text-primary-900 mb-4 flex items-center">
+                <Clock class="w-5 h-5 text-accent-600 mr-2" />
+                Openingstijden
+              </h3>
+              <div class="space-y-2 text-primary-600">
+                <div class="flex justify-between">
+                  <span>Maandag - Vrijdag</span>
+                  <span>08:00 - 17:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Zaterdag</span>
+                  <span>08:00 - 12:00</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>Zondag</span>
+                  <span>Gesloten</span>
+                </div>
+                <div class="pt-2 border-t border-primary-200">
+                  <p class="text-sm text-accent-600 font-medium">24/7 Noodservice beschikbaar</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Map -->
+            <div class="bg-white rounded-2xl p-6 shadow-lg">
+              <h3 class="text-xl font-bold text-primary-900 mb-4">Locatie</h3>
+              <div class="aspect-video bg-primary-100 rounded-lg flex items-center justify-center">
+                <div class="text-center text-primary-600">
+                  <MapPin class="w-12 h-12 mx-auto mb-2" />
+                  <p>Google Maps wordt hier geladen</p>
+                  <p class="text-sm">Kaya Kooyman 22, Saliña</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Contact -->
+    <section class="py-20 bg-gradient-to-r from-accent-500 to-secondary-500">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          24/7 Noodservice
+        </h2>
+        <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto">
+          Heeft u een technische noodgeval buiten kantooruren? 
+          Onze 24/7 noodservice staat klaar voor kritieke situaties.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="tel:+5999461532" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-accent-50 transition-colors inline-flex items-center justify-center">
+            <Phone class="w-5 h-5 mr-2" />
+            Bel Noodlijn: +599 9 461 1532
+          </a>
+          <a href="https://wa.me/5999461532" target="_blank" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors inline-flex items-center justify-center">
+            <MessageCircle class="w-5 h-5 mr-2" />
+            WhatsApp Nood
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Form submission handling
+  const contactForm = document.querySelector('form');
+  
+  contactForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(contactForm);
+    const data = Object.fromEntries(formData.entries());
+    
+    // Here you would typically send the data to your backend
+    console.log('Form submitted:', data);
+    
+    // Show success message (you can replace this with a proper notification)
+    alert('Bedankt voor uw bericht! We nemen zo snel mogelijk contact met u op.');
+    
+    // Reset form
+    contactForm.reset();
+  });
+</script>

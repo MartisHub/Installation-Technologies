@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Shield, Camera, Lock, Phone, DoorOpen, ArrowRight } from 'lucide-react';
+
+const services = [
+  {
+    icon: Camera,
+    title: "CCTV & IP Camera's",
+    description: "Hoogwaardige camerabewaking met HD/4K kwaliteit, nachtzicht en remote viewing mogelijkheden."
+  },
+  {
+    icon: Shield,
+    title: "Inbraakdetectie",
+    description: "Geavanceerde alarmsystemen met bewegingsdetectie, glasbreukdetectie en perimeter beveiliging."
+  },
+  {
+    icon: Lock,
+    title: "Toegangscontrole",
+    description: "Kaartlezers, biometrische systemen, PIN-codes en smartphone-gebaseerde toegang."
+  },
+  {
+    icon: Phone,
+    title: "Intercomsystemen",
+    description: "Video-intercom, audio-communicatie en geïntegreerde toegangscontrole voor gebouwen."
+  },
+  {
+    icon: DoorOpen,
+    title: "Automatische Deuren",
+    description: "Automatische schuifdeuren, draaideuren, poorten en slagbomen met veiligheidsvoorzieningen."
+  }
+];
+---
+
+<Layout 
+  title="Beveiligingssystemen - Installation Technologies N.V."
+  description="Professionele beveiligingssystemen op Curaçao. CCTV, inbraakdetectie, toegangscontrole en intercomsystemen van Installation Technologies N.V."
+>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-accent-900 relative overflow-hidden">
+      <div class="absolute inset-0 opacity-10">
+        <img src="https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg" alt="" class="w-full h-full object-cover" />
+      </div>
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <div class="w-20 h-20 bg-accent-500 rounded-2xl flex items-center justify-center mx-auto mb-8">
+            <Shield class="w-10 h-10 text-white" />
+          </div>
+          <h1 class="text-5xl sm:text-6xl font-bold mb-6 animate-slide-up">
+            Beveiligings<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">systemen</span>
+          </h1>
+          <p class="text-xl text-primary-200 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            Bescherm gebouwen en mensen met moderne camerabewaking, alarmen en toegangscontrole. 
+            Onze beveiligingsoplossingen bieden 24/7 bescherming en gemoedsrust.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div class={`bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 animate-slide-up`} style={`animation-delay: ${index * 0.1}s;`}>
+                <div class="w-16 h-16 bg-accent-500 rounded-xl flex items-center justify-center mb-6">
+                  <Icon class="w-8 h-8 text-white" />
+                </div>
+                <h3 class="text-xl font-bold text-primary-900 mb-4">{service.title}</h3>
+                <p class="text-primary-600 leading-relaxed">{service.description}</p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div>
+            <h2 class="text-4xl font-bold text-primary-900 mb-8">
+              Waarom kiezen voor onze beveiligingssystemen?
+            </h2>
+            <div class="space-y-6">
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <Shield class="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-primary-900 mb-2">24/7 Monitoring</h3>
+                  <p class="text-primary-600">Continue bewaking en directe alarmering bij incidenten.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-secondary-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <Camera class="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-primary-900 mb-2">HD/4K Kwaliteit</h3>
+                  <p class="text-primary-600">Kristalheldere beelden voor optimale identificatie.</p>
+                </div>
+              </div>
+              <div class="flex items-start space-x-4">
+                <div class="w-8 h-8 bg-accent-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                  <Lock class="w-4 h-4 text-white" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-primary-900 mb-2">Geïntegreerde Oplossingen</h3>
+                  <p class="text-primary-600">Alle systemen werken naadloos samen voor maximale beveiliging.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="relative">
+            <img 
+              src="https://images.pexels.com/photos/2449665/pexels-photo-2449665.jpeg" 
+              alt="Beveiligingssystemen"
+              class="rounded-2xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-accent-500 to-secondary-500">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          Vraag deze dienst aan
+        </h2>
+        <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto">
+          Interesse in onze beveiligingssystemen? Neem contact op voor een vrijblijvende offerte 
+          en persoonlijk advies op maat.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-accent-50 transition-colors inline-flex items-center justify-center">
+            Vraag Offerte Aan
+            <ArrowRight class="w-5 h-5 ml-2" />
+          </a>
+          <a href="tel:+5999461532" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors">
+            Bel Direct: +599 9 461 1532
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

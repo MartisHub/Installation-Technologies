@@ -1,0 +1,97 @@
+---
+import { ArrowRight, Shield, Zap, Users, Award } from 'lucide-react';
+---
+
+<section class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- Background with gradient overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-accent-900"></div>
+  
+  <!-- Animated background pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-20 left-20 w-72 h-72 bg-accent-500 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+    <div class="absolute top-40 right-20 w-72 h-72 bg-secondary-500 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-20 left-40 w-72 h-72 bg-accent-600 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 4s;"></div>
+  </div>
+
+  <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <div class="max-w-4xl">
+      
+      <!-- Badge -->
+      <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 animate-fade-in">
+        <Shield class="w-4 h-4 text-accent-400" />
+        <span class="text-accent-400 text-sm font-medium">Marktleider sinds 2010</span>
+      </div>
+
+      <!-- Main heading -->
+      <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
+        Your Security.
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">
+          Our Technology.
+        </span>
+        <span class="block text-4xl sm:text-5xl lg:text-6xl mt-2">
+          Future Ready.
+        </span>
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="text-xl sm:text-2xl text-primary-200 mb-8 max-w-3xl leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+        Installation Technologies N.V. is al meer dan 20 jaar dé betrouwbare partner voor hoogwaardige beveiligings- en IT-oplossingen in Curaçao en het Caribisch gebied. Of het nu gaat om camerabewaking, branddetectie of netwerkbekabeling – wij combineren ervaring, innovatie en topkwaliteit om uw omgeving veiliger en slimmer te maken.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="flex flex-col sm:flex-row gap-4 mb-12 animate-slide-up" style="animation-delay: 0.4s;">
+        <a href="/diensten" class="group bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-2xl hover:shadow-accent-500/25 transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>Ontdek onze diensten</span>
+          <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+        
+        <a href="/contact" class="group bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/20 transition-all duration-300 flex items-center justify-center space-x-2">
+          <span>Vraag een gratis offerte aan</span>
+          <ArrowRight class="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+        </a>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 animate-slide-up" style="animation-delay: 0.6s;">
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <Shield class="w-6 h-6 text-accent-400" />
+          </div>
+          <div class="text-2xl font-bold text-white">500+</div>
+          <div class="text-primary-300 text-sm">Installaties</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-secondary-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <Users class="w-6 h-6 text-secondary-400" />
+          </div>
+          <div class="text-2xl font-bold text-white">200+</div>
+          <div class="text-primary-300 text-sm">Tevreden Klanten</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-accent-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <Zap class="w-6 h-6 text-accent-400" />
+          </div>
+          <div class="text-2xl font-bold text-white">14+</div>
+          <div class="text-primary-300 text-sm">Jaar Ervaring</div>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-12 h-12 bg-secondary-500/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+            <Award class="w-6 h-6 text-secondary-400" />
+          </div>
+          <div class="text-2xl font-bold text-white">24/7</div>
+          <div class="text-primary-300 text-sm">Support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+      <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+    </div>
+  </div>
+</section>

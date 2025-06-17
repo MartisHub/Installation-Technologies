@@ -1,0 +1,129 @@
+---
+import { Shield, Phone, Mail, MapPin, Clock, Linkedin, Facebook, Instagram } from 'lucide-react';
+---
+
+<footer class="bg-primary-900 text-white">
+  <!-- Main Footer -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Company Info -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center space-x-3 mb-6">
+          <div class="w-12 h-12 bg-gradient-to-br from-accent-500 to-secondary-500 rounded-lg flex items-center justify-center">
+            <Shield class="w-7 h-7 text-white" />
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold">Installation Technologies</h3>
+            <p class="text-primary-300 text-sm">N.V.</p>
+          </div>
+        </div>
+        
+        <p class="text-primary-300 mb-6 leading-relaxed">
+          Marktleider in beveiligingsoplossingen en IT-infrastructuur op Curaçao. 
+          Wij creëren veilige, slimme en beveiligde omgevingen voor bedrijven en overheden 
+          in het gehele Caribisch gebied sinds 2010.
+        </p>
+        
+        <div class="flex space-x-4">
+          <a href="#" class="w-10 h-10 bg-primary-800 rounded-lg flex items-center justify-center hover:bg-accent-600 transition-colors">
+            <Linkedin class="w-5 h-5" />
+          </a>
+          <a href="#" class="w-10 h-10 bg-primary-800 rounded-lg flex items-center justify-center hover:bg-accent-600 transition-colors">
+            <Facebook class="w-5 h-5" />
+          </a>
+          <a href="#" class="w-10 h-10 bg-primary-800 rounded-lg flex items-center justify-center hover:bg-accent-600 transition-colors">
+            <Instagram class="w-5 h-5" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6">Navigatie</h4>
+        <ul class="space-y-3">
+          <li><a href="/" class="text-primary-300 hover:text-accent-400 transition-colors">Home</a></li>
+          <li><a href="/over-ons" class="text-primary-300 hover:text-accent-400 transition-colors">Over Ons</a></li>
+          <li><a href="/diensten" class="text-primary-300 hover:text-accent-400 transition-colors">Diensten</a></li>
+          <li><a href="/projecten" class="text-primary-300 hover:text-accent-400 transition-colors">Projecten</a></li>
+          <li><a href="/partners" class="text-primary-300 hover:text-accent-400 transition-colors">Partners</a></li>
+          <li><a href="/carriere" class="text-primary-300 hover:text-accent-400 transition-colors">Carrière</a></li>
+          <li><a href="/contact" class="text-primary-300 hover:text-accent-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-6">Contact</h4>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <Phone class="w-5 h-5 text-accent-400 mt-0.5" />
+            <div>
+              <p class="text-primary-300">+599 9 461 1532</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <Mail class="w-5 h-5 text-accent-400 mt-0.5" />
+            <div>
+              <a href="mailto:it@it.cw" class="text-primary-300 hover:text-accent-400 transition-colors">it@it.cw</a>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <MapPin class="w-5 h-5 text-accent-400 mt-0.5" />
+            <div>
+              <p class="text-primary-300">Kaya Kooyman 22, Saliña</p>
+              <p class="text-primary-300">Schottegatweg Oost 142, Zeelandia</p>
+            </div>
+          </div>
+          
+          <div class="flex items-start space-x-3">
+            <Clock class="w-5 h-5 text-accent-400 mt-0.5" />
+            <div>
+              <p class="text-primary-300">Ma-Vr: 08:00 - 17:00</p>
+              <p class="text-primary-300">Za: 08:00 - 12:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid -->
+  <div class="border-t border-primary-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <h4 class="text-lg font-semibold mb-4 text-center">Onze Diensten</h4>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 text-center">
+        <a href="/diensten/beveiliging" class="text-primary-300 hover:text-accent-400 transition-colors text-sm">Beveiligingstechnologie</a>
+        <a href="/diensten/brandveiligheid" class="text-primary-300 hover:text-accent-400 transition-colors text-sm">Brandveiligheid</a>
+        <a href="/diensten/it-infrastructuur" class="text-primary-300 hover:text-accent-400 transition-colors text-sm">IT & Infrastructuur</a>
+        <a href="/diensten/inspectie" class="text-primary-300 hover:text-accent-400 transition-colors text-sm">Inspectie & Monitoring</a>
+        <a href="/diensten/parkeren" class="text-primary-300 hover:text-accent-400 transition-colors text-sm">Parkeeroplossingen</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="border-t border-primary-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+        <div class="text-primary-400 text-sm">
+          © 2024 Installation Technologies N.V. Alle rechten voorbehouden.
+        </div>
+        
+        <div class="flex space-x-6 text-sm">
+          <a href="/privacy" class="text-primary-400 hover:text-accent-400 transition-colors">Privacy Beleid</a>
+          <a href="/algemene-voorwaarden" class="text-primary-400 hover:text-accent-400 transition-colors">Algemene Voorwaarden</a>
+          <a href="/cookies" class="text-primary-400 hover:text-accent-400 transition-colors">Cookie Beleid</a>
+        </div>
+      </div>
+      
+      <div class="mt-4 pt-4 border-t border-primary-800 text-center">
+        <p class="text-primary-500 text-xs">
+          KvK: 78527 • BTW: NL123456789B01 • Curaçao, Nederlandse Antillen
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

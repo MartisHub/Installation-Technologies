@@ -1,0 +1,155 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import { Shield, Flame, Server, Eye, Car, ArrowRight } from 'lucide-react';
+
+const services = [
+  {
+    icon: Shield,
+    title: "Beveiligingssystemen",
+    description: "Bescherm gebouwen en mensen met moderne camerabewaking, alarmen en toegangscontrole.",
+    features: ["CCTV & IP Camera's", "Inbraakdetectie", "Toegangscontrole", "Intercomsystemen", "Automatische deuren"],
+    href: "/diensten/beveiligingssystemen",
+    image: "https://images.pexels.com/photos/430208/pexels-photo-430208.jpeg"
+  },
+  {
+    icon: Flame,
+    title: "Brandbeveiliging",
+    description: "Detecteer en onderdruk brand vroegtijdig met gecertificeerde installaties.",
+    features: ["Branddetectie", "Blussystemen", "Smoke Screen", "24/7 Monitoring", "Onderhoud"],
+    href: "/diensten/brandbeveiliging",
+    image: "https://images.pexels.com/photos/280076/pexels-photo-280076.jpeg"
+  },
+  {
+    icon: Server,
+    title: "IT & Netwerken",
+    description: "Slimme bekabeling, serverruimtes en telefonie-oplossingen voor elk type organisatie.",
+    features: ["Netwerkbekabeling", "Serverruimtes", "VoIP Systemen", "IT Racks", "Monitoring"],
+    href: "/diensten/it-netwerken",
+    image: "https://images.pexels.com/photos/325229/pexels-photo-325229.jpeg"
+  },
+  {
+    icon: Eye,
+    title: "Inspectie & Monitoring",
+    description: "Real-time controle via thermische camera's, dashboards en meldkamers.",
+    features: ["FLIR Thermische Camera's", "Alarmcentrale", "Dashboarding", "Preventief Onderhoud", "Remote Monitoring"],
+    href: "/diensten/inspectie-monitoring",
+    image: "https://images.pexels.com/photos/442150/pexels-photo-442150.jpeg"
+  },
+  {
+    icon: Car,
+    title: "Parkeersystemen",
+    description: "Automatische toegang en registratie voor parkeerplaatsen en bedrijfsinritten.",
+    features: ["Automatische Systemen", "Kentekenherkenning", "Parkeerbeheersoftware", "Toegangscontrole", "Slagbomen"],
+    href: "/diensten/parkeersystemen",
+    image: "https://images.pexels.com/photos/63294/autos-technology-vw-multi-storey-car-park-63294.jpeg"
+  }
+];
+---
+
+<Layout 
+  title="Diensten - Installation Technologies N.V."
+  description="Complete beveiliging & IT-oplossingen op maat. Van camerabewaking tot netwerkbekabeling - Installation Technologies levert maatwerk voor elke organisatie."
+>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-accent-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-5xl sm:text-6xl font-bold mb-6 animate-slide-up">
+            Complete beveiliging & 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">
+              IT-oplossingen op maat
+            </span>
+          </h1>
+          <p class="text-xl text-primary-200 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            Onze expertise is verdeeld in vijf categorieën, elk met een breed aanbod aan gespecialiseerde diensten. 
+            Van geavanceerde toegangscontrole tot slimme parkeersystemen en betrouwbare IT-netwerken – 
+            wij zorgen dat uw omgeving optimaal beschermd en verbonden is.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <div class={`group bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-500 animate-slide-up`} style={`animation-delay: ${index * 0.1}s;`}>
+                <div class="relative h-64 overflow-hidden">
+                  <img 
+                    src={service.image} 
+                    alt={service.title}
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-primary-900/80 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4">
+                    <div class="w-12 h-12 bg-accent-500 rounded-lg flex items-center justify-center mb-2">
+                      <Icon class="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="p-8">
+                  <h3 class="text-2xl font-bold text-primary-900 mb-4 group-hover:text-accent-600 transition-colors">
+                    {service.title}
+                  </h3>
+                  
+                  <p class="text-primary-600 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <ul class="space-y-2 mb-6">
+                    {service.features.map((feature) => (
+                      <li class="flex items-center text-primary-700">
+                        <div class="w-2 h-2 bg-accent-500 rounded-full mr-3"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <a 
+                    href={service.href} 
+                    class="group/link inline-flex items-center bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-200"
+                  >
+                    Meer informatie
+                    <ArrowRight class="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" />
+                  </a>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-accent-500 to-secondary-500">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          Klaar voor een veiligere toekomst?
+        </h2>
+        <p class="text-xl text-accent-100 mb-8 max-w-3xl mx-auto">
+          Onze experts staan klaar om uw specifieke beveiligingsbehoeften te bespreken 
+          en een op maat gemaakte oplossing te ontwikkelen.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-white text-accent-600 px-8 py-4 rounded-lg font-semibold hover:bg-accent-50 transition-colors">
+            Plan een Gratis Consult
+          </a>
+          <a href="/projecten" class="bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 px-8 py-4 rounded-lg font-semibold hover:bg-white/20 transition-colors">
+            Bekijk Onze Projecten
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,254 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { Building, Heart, Hotel, Banknote, ShoppingCart, Fuel, ArrowRight } from 'lucide-react';
+
+const sectors = [
+  {
+    name: "Overheid",
+    icon: Building,
+    description: "Beveiligingsoplossingen voor overheidsinstellingen en publieke diensten",
+    clients: [
+      { name: "Ministerie van Justitie", services: "Toegangscontrole, CCTV, Branddetectie" },
+      { name: "Politiekorps Curaçao", services: "Beveiligingssystemen, IT-infrastructuur" },
+      { name: "Douane", services: "Camerabewaking, Toegangscontrole" },
+      { name: "Curaçao Airport", services: "Complete beveiligingsoplossing" }
+    ],
+    color: "bg-blue-500"
+  },
+  {
+    name: "Zorg",
+    icon: Heart,
+    description: "Veilige en betrouwbare systemen voor zorginstellingen",
+    clients: [
+      { name: "SEHOS", services: "Brandveiligheid, CCTV, IT-netwerken" },
+      { name: "MFK", services: "Toegangscontrole, Alarminstallatie" },
+      { name: "Fundashon Mariadal", services: "Complete beveiligingsoplossing" },
+      { name: "HNO Medisch Centrum", services: "Camerabewaking, Branddetectie" }
+    ],
+    color: "bg-red-500"
+  },
+  {
+    name: "Hospitality",
+    icon: Hotel,
+    description: "Luxe beveiligings- en IT-oplossingen voor hotels en resorts",
+    clients: [
+      { name: "Marriott Resort", services: "Complete beveiliging, IT-infrastructuur" },
+      { name: "Renaissance Resort", services: "CCTV, Toegangscontrole, Netwerken" },
+      { name: "Hilton Curaçao", services: "Beveiligingssystemen, Brandveiligheid" },
+      { name: "Sandals Resort", services: "Camerabewaking, Alarminstallatie" }
+    ],
+    color: "bg-purple-500"
+  },
+  {
+    name: "Financieel",
+    icon: Banknote,
+    description: "Hoogwaardige beveiliging voor banken en financiële instellingen",
+    clients: [
+      { name: "MCB Bank", services: "Complete beveiligingsoplossing, IT-infrastructuur" },
+      { name: "Banco di Caribe", services: "CCTV, Toegangscontrole, Brandveiligheid" },
+      { name: "RBC Royal Bank", services: "Beveiligingssystemen, Alarmcentrale" },
+      { name: "CIBC FirstCaribbean", services: "Camerabewaking, IT-netwerken" }
+    ],
+    color: "bg-green-500"
+  },
+  {
+    name: "Retail",
+    icon: ShoppingCart,
+    description: "Beveiligingsoplossingen voor winkelcentra en retailers",
+    clients: [
+      { name: "Sambil Curaçao", services: "CCTV, Toegangscontrole, Parkeersystemen" },
+      { name: "Mangusa Hyper Market", services: "Beveiligingssystemen, Branddetectie" },
+      { name: "Cost-U-Less", services: "Camerabewaking, Alarminstallatie" },
+      { name: "Centrum Supermarket", services: "Complete beveiligingsoplossing" }
+    ],
+    color: "bg-orange-500"
+  },
+  {
+    name: "Transport & Energie",
+    icon: Fuel,
+    description: "Robuuste systemen voor transport en energie-infrastructuur",
+    clients: [
+      { name: "Curoil", services: "Brandveiligheid, CCTV, IT-infrastructuur" },
+      { name: "Hato Airport", services: "Complete beveiligingsoplossing" },
+      { name: "Aqualectra", services: "Toegangscontrole, Monitoring systemen" },
+      { name: "CPA", services: "Beveiligingssystemen, Branddetectie" }
+    ],
+    color: "bg-yellow-500"
+  }
+];
+
+const testimonials = [
+  {
+    quote: "Installation Technologies heeft onze complete beveiligingsinfrastructuur gemoderniseerd. Hun expertise en professionele aanpak maken het verschil.",
+    author: "Marco Davelaar",
+    position: "IT Manager",
+    company: "SEHOS",
+    rating: 5
+  },
+  {
+    quote: "Al meer dan 8 jaar werken wij samen met Installation Technologies. Hun betrouwbaarheid en kwaliteit zijn ongeëvenaard op Curaçao.",
+    author: "Jennifer Martis",
+    position: "Facility Manager", 
+    company: "Marriott Resort",
+    rating: 5
+  },
+  {
+    quote: "Van planning tot implementatie, alles verliep vlekkeloos. Onze nieuwe camerasystemen werken perfect en het onderhoud is uitstekend.",
+    author: "Carlos Hernandez",
+    position: "Security Director",
+    company: "Sambil Curaçao", 
+    rating: 5
+  }
+];
+---
+
+<Layout 
+  title="Projecten - Installation Technologies N.V."
+  description="Ontdek onze succesvolle projecten bij overheden, ziekenhuizen, hotels, banken en bedrijven op Curaçao. Trots op onze klanten, trots op ons werk."
+>
+  <Header />
+  
+  <main class="pt-20">
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-br from-primary-900 to-accent-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto text-center text-white">
+          <h1 class="text-5xl sm:text-6xl font-bold mb-6 animate-slide-up">
+            Trots op onze <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 to-secondary-400">klanten</span>, 
+            trots op ons werk
+          </h1>
+          <p class="text-xl text-primary-200 leading-relaxed animate-slide-up" style="animation-delay: 0.2s;">
+            We hebben een brede portfolio van succesvolle projecten in uiteenlopende sectoren. 
+            Van overheidsinstellingen tot hotels, ziekenhuizen en banken: Installation Technologies 
+            levert maatwerk en vertrouwen. Elk project toont onze toewijding aan kwaliteit, veiligheid en innovatie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-16">
+          {sectors.map((sector, sectorIndex) => {
+            const Icon = sector.icon;
+            return (
+              <div class={`animate-slide-up`} style={`animation-delay: ${sectorIndex * 0.1}s;`}>
+                <div class="text-center mb-12">
+                  <div class={`w-20 h-20 ${sector.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
+                    <Icon class="w-10 h-10 text-white" />
+                  </div>
+                  <h2 class="text-4xl font-bold text-primary-900 mb-4">{sector.name}</h2>
+                  <p class="text-xl text-primary-600 max-w-3xl mx-auto">{sector.description}</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {sector.clients.map((client, clientIndex) => (
+                    <div class="bg-gradient-to-br from-primary-50 to-accent-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300">
+                      <h3 class="text-lg font-bold text-primary-900 mb-3">{client.name}</h3>
+                      <p class="text-primary-600 text-sm leading-relaxed">{client.services}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-primary-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-primary-900 mb-4">
+            Wat Onze <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-600 to-secondary-600">Klanten</span> Zeggen
+          </h2>
+          <p class="text-xl text-primary-600 max-w-3xl mx-auto">
+            Lees wat onze klanten over ons zeggen en waarom zij kiezen voor Installation Technologies.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div class={`bg-white rounded-2xl p-8 shadow-lg animate-slide-up`} style={`animation-delay: ${index * 0.2}s;`}>
+              <!-- Stars -->
+              <div class="flex space-x-1 mb-4">
+                {Array.from({ length: testimonial.rating }, (_, i) => (
+                  <svg key={i} class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              
+              <blockquote class="text-primary-700 mb-6 italic leading-relaxed">
+                "{testimonial.quote}"
+              </blockquote>
+              
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-gradient-to-r from-accent-500 to-secondary-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  {testimonial.author.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div>
+                  <div class="font-semibold text-primary-900">{testimonial.author}</div>
+                  <div class="text-primary-600 text-sm">{testimonial.position}</div>
+                  <div class="text-accent-600 text-sm font-medium">{testimonial.company}</div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-20 bg-gradient-to-r from-primary-900 to-accent-900">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center text-white">
+          <div class="animate-slide-up">
+            <div class="text-4xl font-bold mb-2">500+</div>
+            <div class="text-primary-200">Succesvolle Installaties</div>
+          </div>
+          <div class="animate-slide-up" style="animation-delay: 0.1s;">
+            <div class="text-4xl font-bold mb-2">200+</div>
+            <div class="text-primary-200">Tevreden Klanten</div>
+          </div>
+          <div class="animate-slide-up" style="animation-delay: 0.2s;">
+            <div class="text-4xl font-bold mb-2">14+</div>
+            <div class="text-primary-200">Jaar Ervaring</div>
+          </div>
+          <div class="animate-slide-up" style="animation-delay: 0.3s;">
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-primary-200">Support & Monitoring</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold text-primary-900 mb-6">
+          Word onze volgende successtory
+        </h2>
+        <p class="text-xl text-primary-600 mb-8 max-w-3xl mx-auto">
+          Klaar om uw organisatie toe te voegen aan onze lijst van tevreden klanten? 
+          Neem contact op voor een vrijblijvend gesprek over uw beveiligings- en IT-behoeften.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact" class="bg-gradient-to-r from-accent-500 to-secondary-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 inline-flex items-center justify-center">
+            Plan een Gratis Consult
+            <ArrowRight class="w-5 h-5 ml-2" />
+          </a>
+          <a href="/diensten" class="bg-primary-100 text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-primary-200 transition-colors">
+            Bekijk Onze Diensten
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
